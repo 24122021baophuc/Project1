@@ -1,7 +1,7 @@
 <div style="text-align: center;">
-    <h1> AUTOMATIC LICENSE NUMBER PLATE DETECTION AND RECOGNITION
-
- </h1>
+    <h1>
+        AUTOMATIC LICENSE NUMBER PLATE DETECTION AND RECOGNITION
+    </h1>
 </div>
 
 # Overview
