@@ -1,8 +1,8 @@
-<div style="text-align: center;">
+<center>
     <h1>
         AUTOMATIC LICENSE NUMBER PLATE DETECTION AND RECOGNITION
     </h1>
-</div>
+</center>
 
 # Overview
 This project implements an Automatic License Plate Recognition (**ALPR**) system using Python. The goal is to automatically detect and recognize vehicle license plates from images.
