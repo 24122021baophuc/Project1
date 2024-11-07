@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Xe_May_1</folder>
+	<filename>A450.jpg</filename>
+	<path>C:\Users\sv\Downloads\Data\Anh_Chua_Gan_Nhan\Anh_Xe_May_1\A450.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>362</width>
+		<height>272</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>num_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>139</xmin>
+			<ymin>123</ymin>
+			<xmax>212</xmax>
+			<ymax>188</ymax>
+		</bndbox>
+	</object>
+</annotation>
