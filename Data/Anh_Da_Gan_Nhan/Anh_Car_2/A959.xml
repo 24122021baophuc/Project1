@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Car_2</folder>
+	<filename>A959.jpg</filename>
+	<path>E:\Project1-main\Project1-main\Data\Anh_Chua_Gan_Nhan\Anh_Car_2\A959.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>400</width>
+		<height>300</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>196</xmin>
+			<ymin>66</ymin>
+			<xmax>289</xmax>
+			<ymax>169</ymax>
+		</bndbox>
+	</object>
+</annotation>
