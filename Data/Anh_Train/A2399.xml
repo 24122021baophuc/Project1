@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Test</folder>
+	<filename>A2399.jpeg</filename>
+	<path>D:\Project1\Data\Anh_Test\A2399.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>541</width>
+		<height>423</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>208</xmin>
+			<ymin>275</ymin>
+			<xmax>344</xmax>
+			<ymax>316</ymax>
+		</bndbox>
+	</object>
+</annotation>

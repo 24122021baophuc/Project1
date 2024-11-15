@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Xe_May_2</folder>
+	<filename>A1164.jpg</filename>
+	<path>C:\Users\Admin\Documents\Project1\Data\Anh_Chua_Gan_Nhan\Anh_Xe_May_2\A1164.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>362</width>
+		<height>272</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>label</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>140</xmin>
+			<ymin>147</ymin>
+			<xmax>212</xmax>
+			<ymax>208</ymax>
+		</bndbox>
+	</object>
+</annotation>

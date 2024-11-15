@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Train_s</folder>
+	<filename>A2426.jpg</filename>
+	<path>D:\Project1\Data\Anh_Train_s\A2426.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>362</width>
+		<height>272</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>num_plate</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>69</xmin>
+			<ymin>164</ymin>
+			<xmax>159</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>

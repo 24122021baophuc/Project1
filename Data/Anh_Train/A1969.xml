@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Test</folder>
+	<filename>A1969.png</filename>
+	<path>D:\Project1\Data\Anh_Test\A1969.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>590</width>
+		<height>350</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>licence</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>88</xmin>
+			<ymin>48</ymin>
+			<xmax>544</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>

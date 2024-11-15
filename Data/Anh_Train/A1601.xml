@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Anh_Test</folder>
+	<filename>A1601.jpg</filename>
+	<path>D:\Project1\Data\Anh_Test\A1601.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>362</width>
+		<height>272</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>car</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>260</xmin>
+			<ymin>241</ymin>
+			<xmax>334</xmax>
+			<ymax>259</ymax>
+		</bndbox>
+	</object>
+</annotation>

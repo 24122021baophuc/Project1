@@ -1,0 +1,26 @@
+<annotation>
+	<folder>du_lieu_da_duoc_danh_nhan</folder>
+	<filename>Cars6.png</filename>
+	<path>C:\Users\WIN11\Downloads\du_lieu_da_duoc_danh_nhan\Cars6.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>500</width>
+		<height>375</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>licence</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>112</xmin>
+			<ymin>109</ymin>
+			<xmax>385</xmax>
+			<ymax>246</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Xe_may_s</folder>
+	<filename>A1382.jpg</filename>
+	<path>D:\Project1\Data\Anh_Chua_Gan_Nhan\Xe_may_s\A1382.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>472</width>
+		<height>273</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>lisence</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>181</xmin>
+			<ymin>29</ymin>
+			<xmax>262</xmax>
+			<ymax>101</ymax>
+		</bndbox>
+	</object>
+</annotation>
