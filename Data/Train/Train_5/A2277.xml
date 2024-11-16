@@ -1,7 +1,7 @@
 <annotation>
-	<folder>images</folder>
-	<filename>N141.jpeg</filename>
-	<path>/Users/asik/Desktop/ANPR/N141.jpeg</path>
+	<folder>Train_5</folder>
+	<filename>A2277.jpeg</filename>
+	<path>C:\Users\Admin\Documents\Project1\Data\Train\Train_5\A2277.jpeg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,10 +17,10 @@
 		<truncated>0</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>150</xmin>
+			<xmin>147</xmin>
 			<ymin>255</ymin>
 			<xmax>348</xmax>
-			<ymax>296</ymax>
+			<ymax>301</ymax>
 		</bndbox>
 	</object>
 </annotation>

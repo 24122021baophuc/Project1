@@ -1,7 +1,7 @@
 <annotation>
-	<folder>Anh_Xe_May_1</folder>
+	<folder>Train_1</folder>
 	<filename>A372.jpg</filename>
-	<path>C:\Users\sv\Downloads\Data\Anh_Chua_Gan_Nhan\Anh_Xe_May_1\A372.jpg</path>
+	<path>C:\Users\Admin\Documents\Project1\Data\Train\Train_1\A372.jpg</path>
 	<source>
 		<database>Unknown</database>
 	</source>
@@ -17,9 +17,9 @@
 		<truncated>1</truncated>
 		<difficult>0</difficult>
 		<bndbox>
-			<xmin>177</xmin>
-			<ymin>191</ymin>
-			<xmax>268</xmax>
+			<xmin>180</xmin>
+			<ymin>194</ymin>
+			<xmax>265</xmax>
 			<ymax>272</ymax>
 		</bndbox>
 	</object>
