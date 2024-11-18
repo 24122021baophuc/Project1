@@ -36,6 +36,6 @@ def process_images(input_dir, output_dir, file_extension=".jpg"):
             crop_image(input_path, output_path)
 
 # Ví dụ sử dụng
-input_dir = "D:/Project1/Data/Anh_Chua_Xu_Ly/Anh_Xe_May"  # Đường dẫn đến thư mục chứa ảnh gốc
-output_dir = "D:/Project1/Data/Anh_Chua_Gan_Nhan/Xe_may_s"  # Đường dẫn đến thư mục để lưu ảnh đã xử lý
+input_dir = r"C:\Users\WIN11\Downloads\CarTGMT\CarTGMT"  # Đường dẫn đến thư mục chứa ảnh gốc
+output_dir = "D:\Project_1\Anh_Test"  # Đường dẫn đến thư mục để lưu ảnh đã xử lý
 process_images(input_dir, output_dir, file_extension=".jpg")
