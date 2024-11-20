@@ -13,7 +13,7 @@ from shutil import copy
 # folder_Project = os.path.dirname(folder_Code)
 
 """Cách 2: Dùng khi chạy đoạn mã trên GG Colab, chỉnh sửa đường dẫn lại cho phù hợp"""
-folder_Project = '/content/drive/MyDrive/OnlineProject'
+folder_Project = '/content/drive/MyDrive/Project'
 from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
 
@@ -41,7 +41,6 @@ df = pd.DataFrame(labels_dict)
 df.to_csv('labels.csv',index=False)
 #Các bước này tương tự như khi train model Inception-ResNet-v2
 
-
 # parsing
 def parsing(path):
     parser = xet.parse(path).getroot()
@@ -62,6 +61,23 @@ df['center_y'] = (df['ymax'] + df['ymin'])/(2*df['height'])
 
 df['bb_width'] = (df['xmax'] - df['xmin'])/df['width']
 df['bb_height'] = (df['ymax'] - df['ymin'])/df['height']
+
+
+###Đoạn code trên giúp tiền xử lí dữ liệu
+###Sau khi chạy xong trên GG Colab thì cần chạy các câu lệnh sau:
+""""""
+#!git clone https://github.com/ultralytics/yolov5
+""""""
+#!pip install -qr ./yolov5/requirements.txt comet_ml
+""""""
+#mkdir yolov5/data_images/
+""""""
+#mkdir yolov5/data_images/test/
+""""""
+#mkdir yolov5/data_images/train/
+""""""
+#Tiếp tục chạy đoạn code phía dưới trên GG Colab
+
 
 
 ### split the data into train and test
@@ -110,3 +126,5 @@ for fname, x,y, w, h in values:
         f.write(label_txt)
 
         f.close()
+        
+###Sau khi chạy xong code

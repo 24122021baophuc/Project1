@@ -35,10 +35,10 @@ path = glob(f'{Folder_Project}/DataSet/images/*.xml')
 #Dùng hàm glob() để tạo ra 1 list "path" lưu địa chỉ dẫn đến các file '.xml' lưu trong dataset."""
 
 """Cách 2: Dùng GG Colbab để chạy file trên GG Colab"""
+Folder_Project = '/content/drive/MyDrive/Project'
 from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
-path = glob('/content/drive/MyDrive/OnlineProject/DataSet/images/*.xml')
-print(path)
+path = glob(f'{Folder_Project}/DataSet/images/*.xml')
 #Dùng hàm glob() để tạo ra 1 list "path" lưu địa chỉ dẫn đến các file '.xml' lưu trong dataset.
 
 labels_dict = dict(filepath=[],xmin=[],xmax=[],ymin=[],ymax=[])
@@ -58,7 +58,7 @@ for i in path:
     labels_dict['ymin'].append(ymin)
     labels_dict['ymax'].append(ymax)
 df = pd.DataFrame(labels_dict)
-df.to_csv('/content/drive/MyDrive/OnlineProject/labels.csv',index=False)
+df.to_csv(f'{Folder_Project}/labels.csv',index=False)
 #Các câu lệnh trên có tác dụng xử lý các file '.xml' của chúng ta, lấy ra các giá trị xmin max, ymin max và lưu trúng vào file
 #'.csv' (Một dạng file tương đồng với Excel)
 
@@ -81,8 +81,7 @@ df.to_csv('/content/drive/MyDrive/OnlineProject/labels.csv',index=False)
 #c) Xử lý Dataset
 def getFilename(filename):
     filename_image = xet.parse(filename).getroot().find('filename').text
-    # filepath_image = os.path.join(f'{Folder_Project}/DataSet/images',filename_image)
-    filepath_image = os.path.join('/content/drive/MyDrive/OnlineProject/DataSet/images',filename_image)
+    filepath_image = os.path.join(f'{Folder_Project}/DataSet/images',filename_image)
     return filepath_image
 image_path = list(df['filepath'].apply(getFilename))
 #Tạo ra list "image_path" lưu trữ đường dẫn đến các file ảnh trong Dataset
@@ -158,10 +157,10 @@ model.compile(loss='mse',optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4))
 
 ##4.2)
 #Trong thư viện TensorFlow, sử dụng TensorBoard, cụ thể ra sao thì chịu, đọc không hiểu =))
-log_dir = os.path.abspath("/content/drive/MyDrive/OnlineProject/object_detection/train")
+log_dir = os.path.abspath(f"{Folder_Project}/object_detection/train")
 os.makedirs(log_dir, exist_ok=True)
 
 tfb = TensorBoard(log_dir)
 history = model.fit(x=x_train,y=y_train,batch_size=10,epochs=100,validation_data=(x_test,y_test),callbacks=[tfb])
-model.save('/content/drive/MyDrive/OnlineProject/object_detection/train/my_model.keras')
+model.save(f'{Folder_Project}/object_detection/train/my_model.keras')
 #Huấn luyện và lưu lại mô hình
