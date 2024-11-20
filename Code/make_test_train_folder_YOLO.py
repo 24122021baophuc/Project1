@@ -17,29 +17,8 @@ folder_Project = '/content/drive/MyDrive/Project'
 from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
 
-#Sau khi dẫn xong thì bắt đầu chạy.
-path = glob(f'{folder_Project}/DataSet/images/*.xml')
-
-labels_dict = dict(filepath=[],xmin=[],xmax=[],ymin=[],ymax=[])
-for i in path:
-    info = xet.parse(i)
-    root = info.getroot()
-    member_object = root.find('object')
-    labels_info = member_object.find('bndbox')
-    xmin = int(labels_info.find('xmin').text)
-    xmax = int(labels_info.find('xmax').text)
-    ymin = int(labels_info.find('ymin').text)
-    ymax = int(labels_info.find('ymax').text)
-
-    labels_dict['filepath'].append(i)
-    labels_dict['xmin'].append(xmin)
-    labels_dict['xmax'].append(xmax)
-    labels_dict['ymin'].append(ymin)
-    labels_dict['ymax'].append(ymax)
-#####################################
-df = pd.DataFrame(labels_dict)
-df.to_csv('labels.csv',index=False)
-#Các bước này tương tự như khi train model Inception-ResNet-v2
+#Sử dụng file labels.csv đã được tạo trong quá trình train model Inception-ResNet
+df = pd.read_csv('/content/drive/MyDrive/OnlineProject/labels.csv')
 
 # parsing
 def parsing(path):
