@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Tang_Cuong_DuLieu</folder>
+	<filename>A3466.png</filename>
+	<path>D:\Project1\Data\Tang_Cuong_DuLieu\A3466.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>450</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>324</xmin>
+			<ymin>355</ymin>
+			<xmax>387</xmax>
+			<ymax>406</ymax>
+		</bndbox>
+	</object>
+</annotation>

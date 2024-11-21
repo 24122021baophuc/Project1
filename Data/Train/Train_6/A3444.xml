@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Train_6</folder>
+	<filename>A3444.png</filename>
+	<path>D:\Project1\Data\Train\Train_6\A3444.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>450</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>number</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>90</xmin>
+			<ymin>199</ymin>
+			<xmax>240</xmax>
+			<ymax>322</ymax>
+		</bndbox>
+	</object>
+</annotation>

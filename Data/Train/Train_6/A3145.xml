@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Car</folder>
+	<filename>A3145.png</filename>
+	<path>C:\Users\WIN11\Downloads\Tang_cuong_du_lieu\Car\A3145.png</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>600</width>
+		<height>449</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>lisence</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>202</xmin>
+			<ymin>343</ymin>
+			<xmax>347</xmax>
+			<ymax>420</ymax>
+		</bndbox>
+	</object>
+</annotation>
