@@ -29,10 +29,10 @@ def rename_files(duong_dan, duoi_tep, ki_tu_dau, start=1, step=1):
         print(f"Đổi tên {filename} thành {new_name}")
 
 # Ví dụ sử dụng
-duong_dan = "D:/Project1/Data/Anh_Train_s"  # Đường dẫn đến thư mục
-duoi_tep = ".xml"  # Đuôi tệp cần tìm
+duong_dan = r"C:\Users\WIN11\Downloads\Tang_cuong_du_lieu\Xe_may"  # Đường dẫn đến thư mục
+duoi_tep = ".png"  # Đuôi tệp cần tìm
 ki_tu_dau = "A"  # Ký tự đầu
-start = 2  # Bắt đầu từ chỉ số 1
+start = 3000  # Bắt đầu từ chỉ số 1
 step = 2   # Bước nhảy là 2
 
 rename_files(duong_dan, duoi_tep, ki_tu_dau, start, step)

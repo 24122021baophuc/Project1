@@ -1,41 +1,32 @@
+import cv2
 import os
-from PIL import Image
 
-def crop_image(input_path, output_path):
-    # Mở ảnh
-    img = Image.open(input_path)
-    
-    # Lấy kích thước của ảnh
-    width, height = img.size
-    
-    # Tính toán 10% chiều cao từ dưới
-    crop_height = int(height * 0.10)
-    
-    # Cắt ảnh (loại bỏ 10% chiều cao từ dưới)
-    cropped_img = img.crop((0, 0, width, height - crop_height))
-    
-    # Lưu ảnh đã cắt vào đường dẫn mới
-    cropped_img.save(output_path)
-    print(f"Đã lưu ảnh đã cắt tại: {output_path}")
-
-def process_images(input_dir, output_dir, file_extension=".jpg"):
-    # Kiểm tra nếu thư mục đích không tồn tại, tạo mới
-    if not os.path.exists(output_dir):
-        os.makedirs(output_dir)
-    
-    # Duyệt qua tất cả các tệp trong thư mục nguồn
+def crop_images_in_directory(input_dir, output_dir):
+    # Duyệt qua tất cả các tệp trong thư mục đầu vào
     for filename in os.listdir(input_dir):
-        if filename.endswith(file_extension):
-            # Xây dựng đường dẫn đầy đủ của ảnh
-            input_path = os.path.join(input_dir, filename)
-            
-            # Tạo tên tệp mới và đường dẫn lưu vào thư mục đích
-            output_path = os.path.join(output_dir, filename)
-            
-            # Gọi hàm để cắt ảnh và lưu vào thư mục đích
-            crop_image(input_path, output_path)
+        # Tạo đường dẫn đầy đủ đến tệp ảnh
+        img_path = os.path.join(input_dir, filename)
+        
+        # Đọc ảnh từ đường dẫn
+        image = cv2.imread(img_path)
+
+        height, width, channels = image.shape
+
+        # Tính toán chiều cao mới sau khi cắt 10%
+        new_height = int(height * 0.9)
+
+        # Cắt ảnh: lấy phần trên 90% của ảnh
+        cropped_image = image[:new_height, :]
+
+        # Lưu ảnh đã cắt vào thư mục đầu ra
+        output_path = os.path.join(output_dir, filename)
+        cv2.imwrite(output_path, cropped_image)
+
 
 # Ví dụ sử dụng
-input_dir = r"C:\Users\WIN11\Downloads\CarTGMT\CarTGMT"  # Đường dẫn đến thư mục chứa ảnh gốc
-output_dir = "D:\Project_1\Anh_Test"  # Đường dẫn đến thư mục để lưu ảnh đã xử lý
-process_images(input_dir, output_dir, file_extension=".jpg")
+input_directory = 'D:Project_1/New'  # Thay thế bằng thư mục đầu vào của bạn
+output_directory = 'D:Project_1/New_1'  # Thay thế bằng thư mục đầu ra của bạn
+
+crop_images_in_directory(input_directory, output_directory)
+
+
