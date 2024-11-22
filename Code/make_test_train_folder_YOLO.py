@@ -18,7 +18,7 @@ from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
 
 #Sử dụng file labels.csv đã được tạo trong quá trình train model Inception-ResNet
-df = pd.read_csv('/content/drive/MyDrive/OnlineProject/labels.csv')
+df = pd.read_csv(f'{folder_Project}/labels.csv')
 
 # parsing
 def parsing(path):
@@ -44,17 +44,17 @@ df['bb_height'] = (df['ymax'] - df['ymin'])/df['height']
 
 ###Đoạn code trên giúp tiền xử lí dữ liệu
 ###Sau khi chạy xong trên GG Colab thì cần chạy các câu lệnh sau:
-""""""
+"""----------------------------------------"""
 #!git clone https://github.com/ultralytics/yolov5
-""""""
+"""----------------------------------------"""
 #!pip install -qr ./yolov5/requirements.txt comet_ml
-""""""
+"""----------------------------------------"""
 #mkdir yolov5/data_images/
-""""""
+"""----------------------------------------"""
 #mkdir yolov5/data_images/test/
-""""""
+"""----------------------------------------"""
 #mkdir yolov5/data_images/train/
-""""""
+"""----------------------------------------"""
 #Tiếp tục chạy đoạn code phía dưới trên GG Colab
 
 
@@ -106,4 +106,18 @@ for fname, x,y, w, h in values:
 
         f.close()
         
-###Sau khi chạy xong code
+###Sau khi chạy xong code chia folder thì tiếp tục chạy các câu lệnh trong GG Colab:
+"""----------------------------------------"""
+#!python ./yolov5/train.py --data /content/drive/MyDrive/Project/data.yaml --cfg ./yolov5/models/yolov5s.yaml --batch-size 8 --name Model --epochs 5
+"""----------------------------------------"""
+#!python ./yolov5/export.py --weight ./yolov5/runs/train/Model/weights/best.pt --include torchscript onnx
+"""----------------------------------------"""
+"""----------------------------------------"""
+#Lúc này tệp huấn luyện đã được lưu lại trên folder clone GitHub, bạn có thể tải về máy bằng cách thực hiện tiếp:
+"""----------------------------------------"""
+#!ls /content/yolov5/runs    -> Đi đến thư mục 'runs' chứa các dữ liệu sau khi train.
+"""----------------------------------------"""
+#!zip -r runs.zip /runs     -> Nén các thư mục lại vào file runs.zip
+"""----------------------------------------"""
+#from google.colab import files
+#files.download('/content/runs.zip')    -> Tải tệp runs.zip về máy

@@ -1,5 +1,4 @@
-##############################Phần 2.4:################################
-# a) Cài đặt các thư viện cần thiết
+#Cài đặt các thư viện cần thiết
 
 import os
 import cv2
@@ -22,11 +21,11 @@ from tensorflow.keras.layers import Dense, Dropout, Flatten, Input
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 
 
-# b) Dẫn đến thư mục chứa DataSet:
+#Dẫn đến thư mục chứa DataSet:
 """Cách 1: Dùng đường dẫn tương đối để làm việc trên máy tính cá nhân
-# GGColab dùng GG Drive, chúng ta sẽ dùng trực tiếp từ thư mục thông qua đường dẫn tương đối:
-# Với vị trí các thư mục như hiện tại, cách làm sẽ như sau:
+# Ta có thể tìm đường dẫn tương đối cần thiết như sau:
 Folder_Code = os.path.dirname(__file__)
+#-> Đường dẫn đến Folder chứa file này -> Tức là Folder "Code"
 # Folder_code sẽ lưu đường dẫn đến folder "Code".
 
 Folder_Project = os.path.dirname(Folder_Code)
@@ -35,6 +34,7 @@ path = glob(f'{Folder_Project}/DataSet/images/*.xml')
 #Dùng hàm glob() để tạo ra 1 list "path" lưu địa chỉ dẫn đến các file '.xml' lưu trong dataset."""
 
 """Cách 2: Dùng GG Colbab để chạy file trên GG Colab"""
+
 Folder_Project = '/content/drive/MyDrive/Project'
 from google.colab import drive
 drive.mount('/content/drive', force_remount=True)
@@ -62,23 +62,8 @@ df.to_csv(f'{Folder_Project}/labels.csv',index=False)
 #Các câu lệnh trên có tác dụng xử lý các file '.xml' của chúng ta, lấy ra các giá trị xmin max, ymin max và lưu trúng vào file
 #'.csv' (Một dạng file tương đồng với Excel)
 
-"""
 
-# file_path = image_path[38] #path of our image N137.jpeg
-# img = cv2.imread(file_path) #read the image
-# # xmin-1804/ymin-1734/xmax-2493/ymax-1882
-# img = io.imread(file_path) #Read the image
-# fig = px.imshow(img)
-# fig.update_layout(width=600, height=500, margin=dict(l=10, r=10, b=10, t=10),xaxis_title='Figure 8 - N137.jpeg with bounding box')
-# fig.add_shape(type='rect',x0=401, x1=593, y0=456, y1=493, xref='x', yref='y',line_color='cyan')
-# fig.show()
-
-"""
-#Đoạn code được ẩn phía trên là nháp, có tác dụng hiện ảnh ra sử dụng các thư viện như OpenCV, và vẽ 1 hình chữ nhật đánh dấu
-#lên ảnh xem thử file '.xml' có được đọc đúng hay không. Nói chung là không cần thiết
-
-
-#c) Xử lý Dataset
+#Xử lý Dataset
 def getFilename(filename):
     filename_image = xet.parse(filename).getroot().find('filename').text
     filepath_image = os.path.join(f'{Folder_Project}/DataSet/images',filename_image)
@@ -87,9 +72,6 @@ image_path = list(df['filepath'].apply(getFilename))
 #Tạo ra list "image_path" lưu trữ đường dẫn đến các file ảnh trong Dataset
 
 
-
-
-###################Phần 3:######################
 labels = df.iloc[ : , 1 : ].values
 #Tạo ra "labels" lưu các giá trị xmax min, ymax min tương ứng của từng ảnh
 data = []
@@ -131,7 +113,7 @@ x_train,x_test,y_train,y_test = train_test_split(X,y,train_size=0.8,random_state
 
 
 
-##################################Phần 4:##################################
+################################################################
 ##4.1) Xây dựng model:
 #Giới thiệu sơ bộ về mô hình InceptionResNetV2:
 #InceptionResNetV2 là mô hình đã được huấn luyện trước trên tập dữ liệu ImageNet, chúng ta sẽ sử dụng nó để xây dựng
@@ -154,9 +136,7 @@ model.compile(loss='mse',optimizer=tf.keras.optimizers.Adam(learning_rate=1e-4))
 #Câu lệnh giúp hiển thị kiến trúc của mô hình, có thể bật lên để xem thử, không cần thiết.
 
 
-
-##4.2)
-#Trong thư viện TensorFlow, sử dụng TensorBoard, cụ thể ra sao thì chịu, đọc không hiểu =))
+#Trong thư viện TensorFlow, sử dụng TensorBoard:
 log_dir = os.path.abspath(f"{Folder_Project}/object_detection/train")
 os.makedirs(log_dir, exist_ok=True)
 
