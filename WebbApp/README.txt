@@ -1,0 +1,1 @@
+Vì không thể push được file quá lớn lên GitHub nên file model '.keras' sẽ không được push lên mà sẽ được người dùng tự train theo hướng dẫn và tải về.
