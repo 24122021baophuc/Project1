@@ -1,0 +1,26 @@
+<annotation>
+	<folder>Chay_Thi_Nghiem</folder>
+	<filename>Test_049.jpg</filename>
+	<path>D:\Project\Chay_Thi_Nghiem\Test_049.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>601</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>bien_so</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>187</xmin>
+			<ymin>271</ymin>
+			<xmax>365</xmax>
+			<ymax>397</ymax>
+		</bndbox>
+	</object>
+</annotation>
