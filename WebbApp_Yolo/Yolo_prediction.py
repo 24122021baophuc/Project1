@@ -95,7 +95,7 @@ def non_maximum_supression(input_image,detections):
         row = detections[i]
         confidence = row[4] # confidence of detecting license plate
         
-        if confidence > 0.4:
+        if confidence > 0.45: #Hoặc 0.4
             class_score = row[5] # probability score of license plate
             if class_score > 0.25: ###Ban đầu 0.25
                 cx, cy , w, h = row[0:4]
