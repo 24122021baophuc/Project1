@@ -1,1 +1,1 @@
-Vì slide được làm trên Canva nên khi tải về hiệu ứng bị thiếu. Vào link Canva để có được trải nghiệm hoàn hảo nhất.
+Chỉnh lại font chữ. xóa những elements bị dư và xóa đi những slide đã hide trên canvaS
