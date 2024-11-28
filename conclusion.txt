@@ -1,9 +1,0 @@
-\indent Thông qua trình tìm hiểu về dự án, chúng tôi đã nghiên cứu và xây dựng hệ thống nhận diện biển số tự động bằng cách kết hợp các mô hình xử lý ảnh tiên tiến như OpenCV, YOLO và PyTesseract. Dataset gồm 3,000 hình ảnh có đa dạng về góc chụp, trong nhiều điều kiện ánh sáng khác nhau và loại phương tiện cơ giới đã giữ vai trò trọng yếu trong việc huấn luyện và kiểm tra mô hình.
-
-\indent Qua kết quả thử nhiệm cho thấy hệ thống đạt được 
-
-\indent Điều này chỉ ra rằng tính thực tiễn của mô hình trong các ứng dụng vào đời sống, đặc biệt trong việc gia tăng hiệu quả kiểm soát lượng hay cải thiện giao thông thông minh như quản lý bãi giữ xe, phát hiện vi phạm giao thông thông qua thiết bị ghi hình và xác định các xe tại các trạm thu phí tự động.
-
-\indent Hệ thống đã được ứng dụng mô hình YOLO và mô hình InceptionResNetV2, mặc dù có lợi thế về tốc độ xử lý cao và độ chính xác cao, nhưng khi thử nghiểm hệ thống vẫn đang gặp phải một vài trở ngại không nhỏ như khó khăn trong khi làm việc với các đối tượng nhỏ hay các đối tượng quá gần nhau, đòi hỏi tài nguyên phần cứng lớn, các thiết bị hiệu năng không cao bị hạn chế khả năng triển khai.
-
-\indent Để tối ưu được các nhược điểm đang gặp phải trong hiện tại, nhóm sẽ tập trung mở rộng vào các hướng phát triển sau. Đầu tiên, nâng cấp Dataset để có thể thu thập thêm đa dạng dữ liệu từ môi trường sống xung quanh như biển số xe bị mờ, bị che khuất. Ngoài ra, cải tiến mô hình qua việc thử nghiệm và áp dụng các mô hình học máy mạnh mẽ và tiên tiến hơn để làm giảm thời gian xử lý và yêu cầu tài nguyên, từ đó có thể ứng dụng lên các thiết bị IoT và hệ thống nhúng. Ví dụ như mô hình Vision Transformer giúp cải thiện độ chính xác cao, đồng thời làm giảm thời gian cần thiết để huấn luyện mô hình. Bên cạnh đó có thể thử nghiệm mô hình học sâu YOLOv11 với độ chính xác cao hơn với ít tham số và khả năng thích ứng trên nhiều môi trường khác nhau.

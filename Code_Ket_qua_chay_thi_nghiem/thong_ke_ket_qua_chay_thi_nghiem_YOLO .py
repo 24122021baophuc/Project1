@@ -13,7 +13,7 @@ INPUT_WIDTH = 640
 INPUT_HEIGHT = 640
 
 # Load YOLO Model
-net = cv2.dnn.readNetFromONNX(r"D:\Project1\WebbApp_Yolo\Model\weights\best.onnx")
+net = cv2.dnn.readNetFromONNX(r"C:\Users\Admin\Documents\Project1\WebbApp_Yolo\Model\weights/best.onnx")
 net.setPreferableBackend(cv2.dnn.DNN_BACKEND_OPENCV)
 net.setPreferableTarget(cv2.dnn.DNN_TARGET_CPU)
 
@@ -52,12 +52,10 @@ def extract_text_from_roi(image, bbox):
         gray = cv2.cvtColor(roi_bgr, cv2.COLOR_BGR2GRAY)
         magic_color = apply_brightness_contrast(gray, brightness=40, contrast=70)
         text = pt.image_to_string(magic_color, lang='eng', config='--psm 6')
-        if text != "":
-            text = str(text)
-            text = text.strip()
-            while not text[-1].isalnum(): text = text[:-1]
-            while not text[0].isalnum(): text = text[1:]
-        return text
+        try:
+            return text
+        except:
+            return ""
 
 # Hàm đọc nhãn từ tệp XML
 def load_ground_truth(file_path):
@@ -202,7 +200,7 @@ def process_images_and_xml(folder_path):
     return result
 
 # Đường dẫn đến thư mục chứa ảnh, XML và văn bản
-folder_path = r'C:\Users\WIN11\Downloads\Test'
+folder_path = r'C:\Users\Admin\Documents\Project1\Data_de_test\Anh_va_file'
 
 # Gọi hàm và in kết quả
 results = process_images_and_xml(folder_path)
@@ -212,9 +210,9 @@ edit_distance_mean = sum([x[-2] for x in results]) / len(results)
 
 columns = ['File Name', 'Predicted Box', 'Ground Truth', 'Predicted Text', 'Actual Text', 'Edit Distance', 'IoU']
 df = pd.DataFrame(results, columns=columns)
-
-csv_path = r"C:\Users\WIN11\Downloads\result_YOLO.csv"  # Đường dẫn lưu tệp CSV
-df.to_csv(csv_path, index=False)
-
 print(f'IoU Mean = {iou_mean}')
 print(f'Edit Distance Mean = {edit_distance_mean}')
+csv_path = r"D:\Project\ket_qua"  # Đường dẫn lưu tệp CSV
+df.to_csv(csv_path, index=False)
+
+
