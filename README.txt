@@ -1,1 +1,0 @@
-Chỉnh lại font chữ và xóa đi những slide đã hide trên canva
