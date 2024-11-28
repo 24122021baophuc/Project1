@@ -3,7 +3,8 @@ import numpy as np
 import pytesseract as pt
 from skimage import io
 
-"""Sau khi chạy chương trình thì bấm ESC để tắt."""
+"""Sau khi chạy chương trình thì bấm ESC để tắt.
+Trước khi chạy hãy thay đổi đường dẫn đến mô hình YOLO"""
 
 # url = 'http://192.168.1.19:8080/video'
 # video_cap = cv2.VideoCapture(url)

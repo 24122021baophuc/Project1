@@ -9,7 +9,7 @@ folder_WebbApp = os.path.dirname(__file__)
 folder_Project = os.path.dirname(folder_WebbApp)
 
 model = tf.keras.models.load_model(
-    '{}/object_detection/train/my_model.keras'.format(folder_Project))
+    '{}/object_detection/train/my_model.keras'.format(folder_WebbApp))
 
 def object_detection(path, filename):
     # Read image
