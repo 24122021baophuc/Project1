@@ -12,7 +12,7 @@ def clear_folders():
     # Danh sách các thư mục cần xóa ảnh
     folders = ["static/upload", "static/predict", "static/roi"]
     for folder in folders:
-        os.makedirs(f"{BASE_PATH}/{folder}")
+        os.makedirs(f"{BASE_PATH}/{folder}", exist_ok=1)
         files = glob.glob(f"{BASE_PATH}/{folder}/*")  # Lấy tất cả file trong thư mục
         for file in files:
             try:
